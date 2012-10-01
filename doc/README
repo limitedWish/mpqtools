@@ -1,0 +1,25 @@
+blp2bmp
+-----------
+This command line tool can convert textures enclosed in BLP files (Blizzard's 
+texture format) into ordinary 32bpp BMP image. DXT1/3/5 compression methods 
+are supported. Command syntax listed as below:
+
+    Usage: blp2bmp [-i | -a] <blp_file>
+           -i      dump blp2 header
+	       -a      convert all mipmaps
+
+reference
+-----------
+I have find many useful information in the web, some of which are copyed as
+seperate file saved in this folder with their source URL listed below:
+
+texture_compression_s3tc.txt
+ - http://www.opengl.org/registry/specs/EXT/texture_compression_s3tc.txt
+texture_compression_dxt1.txt
+ - http://www.opengl.org/registry/specs/EXT/texture_compression_dxt1.txt
+
+Other sources I will only save the URL here:
+
+ - http://www.wowwiki.com/BLP_file
+ - http://en.wikipedia.org/wiki/.BLP
+ - http://en.wikipedia.org/wiki/S3_Texture_Compression
