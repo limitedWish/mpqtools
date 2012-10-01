@@ -1,12 +1,37 @@
+mpqx
+-----------
+This command line tool can extract files enclosed in MPQ archives. StormLib
+is used to parse/extract MPQ archive. 
+
+Command syntax listed as below:
+
+    Usage: mpqx [options] <MPQ Archive>
+                 options: -a extract all files in archive
+                          -p <pattern>
+                             extract only files whos full path match the
+                             <pattern>. Wildcast '?' and '*' can be used.
+                          -l list all files in the archive
+                          -L <listfile>
+                             supply additional listfile
+
+    Do nothing if no option is given.
+
+Tested under Mac OS X 10.8.2, StormLib 8.20.
+
 blp2bmp
 -----------
 This command line tool can convert textures enclosed in BLP files (Blizzard's 
 texture format) into ordinary 32bpp BMP image. DXT1/3/5 compression methods 
-are supported. Command syntax listed as below:
+are supported.
+
+Command syntax listed as below:
 
     Usage: blp2bmp [-i | -a] <blp_file>
            -i      dump blp2 header
 	       -a      convert all mipmaps
+
+Tested under Mac OS X 10.8.2, this program can convert Interface/ICONS/*.blp
+textures inflated from Data/interface.MPQ, World of Warcraft r16057.
 
 reference
 -----------
@@ -17,9 +42,12 @@ texture_compression_s3tc.txt
  - http://www.opengl.org/registry/specs/EXT/texture_compression_s3tc.txt
 texture_compression_dxt1.txt
  - http://www.opengl.org/registry/specs/EXT/texture_compression_dxt1.txt
+The MoPaQ File Format 1.0.txt
+ - http://www.zezula.net/download/stormlib.zip
 
 Other sources I will only save the URL here:
 
  - http://www.wowwiki.com/BLP_file
  - http://en.wikipedia.org/wiki/.BLP
  - http://en.wikipedia.org/wiki/S3_Texture_Compression
+ - http://www.zezula.net/en/mpq/stormlib.html
