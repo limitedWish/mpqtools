@@ -58,20 +58,15 @@ usage(void)
 int
 main(int argc, char **argv)
 {
+  int rv;
+  char *name;
   HANDLE mpq, search;
   SFILE_FIND_DATA file;
 
-  int i;
-  TMPQArchive *ptr;
-  TFileEntry  *fptr;
-
-  int rv;
   int extract_all = 0;
   int show_listfile = 0;
   char *pattern = NULL;
   char *listfile = NULL;
-
-  char *name;
 
   if (argc <= 2) {
     usage();
